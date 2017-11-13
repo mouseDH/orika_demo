@@ -6,7 +6,7 @@ package com.orika.study.run;
 public class SimpleObjectMap {
 
     public static void main(String[] args) {
-
+        System.out.println("hello world");
     }
 
 }
