@@ -18,8 +18,8 @@ public class OneToOne {
 
         //注册
         mapperFactory.classMap(PersonA.class, PersonB.class)
-                .field("nameA","nameB")
-                .field("ageA","ageB")
+                .field("nameA", "nameB")
+                .field("ageA", "ageB")
                 .byDefault()//其它的字段默认匹配
                 .register();
 
@@ -32,11 +32,19 @@ public class OneToOne {
         personA.setAgeA("39");
 
         //映射生成personB
-        PersonB personB = mapperFacade.map(personA,PersonB.class);
+        PersonB personB = mapperFacade.map(personA, PersonB.class);
+        //实体类映射实体类 该方法通过personB.getClass获取class
+        PersonB personB1 = new PersonB();
+        mapperFacade.map(personA, personB1);
+        //通过Type
+//        mapperFacade.map()
+
+
 
         //验证
         System.out.println(personB.getAgeB());
-        System.out.println(personB.getAgeB());
+        System.out.println(personB1.getAgeB());
+
 
 
     }
