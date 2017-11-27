@@ -3,18 +3,18 @@ package com.orika.study.dto;
 /**
  * Created by hank on 17-11-14.
  */
-public class PersonA {
+public class PersonACopy {
 
     private String ageA;
     private String nameA;
-    private String sexid;
+    private String sexNo;
 
-    public String getSexid() {
-        return sexid;
+    public String getSexNo() {
+        return sexNo;
     }
 
-    public void setSexid(String sexid) {
-        this.sexid = sexid;
+    public void setSexNo(String sexNo) {
+        this.sexNo = sexNo;
     }
 
     public String getNameA() {
@@ -25,7 +25,7 @@ public class PersonA {
         this.nameA = nameA;
     }
 
-    public String getAgeA() { 
+    public String getAgeA() {
         return ageA;
     }
 
